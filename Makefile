@@ -6,11 +6,11 @@
 #    By: drtaili <drtaili@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/03 01:16:57 by drtaili           #+#    #+#              #
-#    Updated: 2022/12/03 23:38:27 by drtaili          ###   ########.fr        #
+#    Updated: 2022/12/04 02:21:29 by drtaili          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC = ft_printf.c ft_printf_utils.c
+SRC = ft_printf.c ft_printf_utils.c ft_printf_utils2.c
 
 OBJS = $(SRC:.c=.o)
 

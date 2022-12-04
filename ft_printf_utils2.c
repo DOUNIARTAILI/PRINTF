@@ -1,27 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_printf_utils2.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: drtaili <drtaili@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/03 23:22:32 by drtaili           #+#    #+#             */
-/*   Updated: 2022/12/04 02:22:50 by drtaili          ###   ########.fr       */
+/*   Created: 2022/12/04 02:20:33 by drtaili           #+#    #+#             */
+/*   Updated: 2022/12/04 02:22:29 by drtaili          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "ft_printf.h"
 
-# include <unistd.h>
-# include <stdarg.h>
+int	ft_putchar(char c)
+{
+	write(1, &c, 1);
+	return (1);
+}
 
-int		ft_printf(const char *format, ...);
-int		ft_puthexa(unsigned long n);
-int		ft_put_hexamaj(unsigned int n);
-int		ft_putnbr(int n);
-int		ft_putnbr_u(unsigned int n);
-int		ft_putchar(char c);
-int		ft_putstr(char *s);
+size_t	ft_strlen(const char *s)
+{
+	size_t	len;
 
-#endif
+	len = 0;
+	while (s[len] != '\0')
+		len++;
+	return (len);
+}
+
+int	ft_putstr(char *s)
+{
+	if (!s)
+	{
+		write(1, "(null)", 6);
+		return (6);
+	}
+	write(1, s, ft_strlen(s));
+	return (ft_strlen(s));
+}

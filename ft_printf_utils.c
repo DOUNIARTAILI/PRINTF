@@ -6,23 +6,13 @@
 /*   By: drtaili <drtaili@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/03 23:38:16 by drtaili           #+#    #+#             */
-/*   Updated: 2022/12/03 23:38:18 by drtaili          ###   ########.fr       */
+/*   Updated: 2022/12/04 02:20:56 by drtaili          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #define HEXAMAJ "0123456789ABCDEF"
 #define HEXAMIN "0123456789abcdef"
-
-size_t	ft_strlen(const char *s)
-{
-	size_t	len;
-
-	len = 0;
-	while (s[len] != '\0')
-		len++;
-	return (len);
-}
 
 int	ft_putnbr(int n)
 {
